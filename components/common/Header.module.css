@@ -1,0 +1,37 @@
+.gradient {
+  position: relative;
+  background-image: linear-gradient(135deg, #291f3b 20%, #796c91 100%);
+  z-index: 1;
+}
+
+.gradient::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(237, 34, 36),
+    rgb(243, 91, 34),
+    rgb(249, 150, 33),
+    rgb(245, 193, 30),
+    rgb(241, 235, 27) 27%,
+    rgb(241, 235, 27),
+    rgb(241, 235, 27) 33%,
+    rgb(99, 199, 32),
+    rgb(12, 155, 73),
+    rgb(33, 135, 141),
+    rgb(57, 84, 165),
+    rgb(97, 55, 155),
+    rgb(147, 40, 142)
+  );
+  z-index: -1;
+  transition: opacity 1s linear;
+  opacity: 0;
+}
+
+.gradientActive.gradient::before {
+  opacity: 1;
+}
