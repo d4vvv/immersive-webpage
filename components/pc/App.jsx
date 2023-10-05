@@ -1,4 +1,3 @@
-import './index.css'
 import { Canvas } from '@react-three/fiber'
 import { Environment } from '@react-three/drei'
 import React, { useState, Suspense } from 'react'
@@ -41,10 +40,7 @@ function App() {
           />
           <color attach='background' args={['#f5efe6']} />
 
-          <Environment
-            background={false}
-            files={process.env.PUBLIC_URL + '/textures/belfast.hdr'}
-          />
+          <Environment background={false} files={'textures/belfast.hdr'} />
           <ambientLight color='wheat' intensity={1} />
           <Rooms full={full} />
 

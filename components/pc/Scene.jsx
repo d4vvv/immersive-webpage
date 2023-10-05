@@ -175,18 +175,9 @@ export function Scene({
     animateCameraDefault()
   }
 
-  const arrowDoctor = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + '/models/arrowDoctor.glb'
-  )
-  const arrowDoor = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + '/models/arrowDoor.glb'
-  )
-  const arrowRadiologist = useLoader(
-    GLTFLoader,
-    process.env.PUBLIC_URL + '/models/arrowRadiologist.glb'
-  )
+  const arrowDoctor = useLoader(GLTFLoader, '/models/arrowDoctor.glb')
+  const arrowDoor = useLoader(GLTFLoader, '/models/arrowDoor.glb')
+  const arrowRadiologist = useLoader(GLTFLoader, '/models/arrowRadiologist.glb')
 
   useEffect(() => {
     arrowDoctor.scene.rotation.y = 1.5
@@ -203,11 +194,11 @@ export function Scene({
 
   const exclamationMarkDoctor = useLoader(
     GLTFLoader,
-    process.env.PUBLIC_URL + '/models/exclamationMarkDoctor.glb'
+    '/models/exclamationMarkDoctor.glb'
   )
   const exclamationMarkGlass = useLoader(
     GLTFLoader,
-    process.env.PUBLIC_URL + '/models/exclamationMarkGlass.glb'
+    '/models/exclamationMarkGlass.glb'
   )
 
   useEffect(() => {
@@ -216,7 +207,7 @@ export function Scene({
 
   const exclamationMarkDevices = useLoader(
     GLTFLoader,
-    process.env.PUBLIC_URL + '/models/exclamationMarkDevices.glb'
+    '/models/exclamationMarkDevices.glb'
   )
 
   useEffect(() => {

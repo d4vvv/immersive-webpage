@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@next/font": "13.0.7",
+    "@react-three/drei": "^9.86.3",
+    "@react-three/fiber": "^8.14.4",
+    "@react-three/xr": "^5.7.1",
     "@types/node": "18.11.16",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
@@ -20,8 +23,11 @@
     "next-seo": "^5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-spinners": "^0.13.8",
     "tailwind-hamburgers": "^1.2.2",
-    "typescript": "4.9.4"
+    "three": "^0.157.0",
+    "typescript": "4.9.4",
+    "webxr-polyfill": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

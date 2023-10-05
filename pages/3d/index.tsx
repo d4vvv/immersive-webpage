@@ -1,6 +1,5 @@
-import { NextSeo } from "next-seo";
-import { MainPage } from "../../components/main-page/MainPage";
+import App from '../../components/pc/App'
 
 export default function Home() {
-  return <MainPage />;
+  return <App />
 }
