@@ -24,7 +24,7 @@ function App() {
   const [restore, setRestore] = useState(0)
   const [show, setShow] = useState(0)
   return (
-    <>
+    <main className={'scroll-smooth h-screen'}>
       <Canvas shadows>
         <Suspense fallback={<LoadingScreen />}>
           <OrbitControls
@@ -65,7 +65,7 @@ function App() {
           <FloatingText exclamation={exclamation} />
         </Suspense>
       </Canvas>
-    </>
+    </main>
   )
 }
 

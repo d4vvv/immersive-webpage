@@ -3,8 +3,14 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Layout } from '../components/common/Layout'
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+  if (router.pathname === '/3d' || router.pathname === '/3dm') {
+    return <Component {...pageProps} />
+  }
+
   return (
     <>
       <NextSeo
@@ -21,5 +27,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   )
 }
-
 export default MyApp

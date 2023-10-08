@@ -30,7 +30,7 @@ function App() {
   const [hover2, setHover2] = useState(false)
   const [hover3, setHover3] = useState(false)
   return (
-    <>
+    <main className={'scroll-smooth h-screen'}>
       <VRButton />
       <Canvas shadows>
         <Suspense fallback={<LoadingScreen />}>
@@ -105,7 +105,7 @@ function App() {
           </XR>
         </Suspense>
       </Canvas>
-    </>
+    </main>
   )
 }
 

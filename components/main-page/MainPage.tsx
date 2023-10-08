@@ -1,8 +1,7 @@
-import { ContactUs } from './ContactUs';
-import { Contribution } from './Contribution';
-import { ImmersiveExperience } from './ImmersiveExperience';
-import { SampleSection } from './SampleSection';
-
+import { ContactUs } from './ContactUs'
+import { Contribution } from './Contribution'
+import { ImmersiveExperience } from './ImmersiveExperience'
+import { SampleSection } from './SampleSection'
 export const MainPage: React.FC = () => {
   return (
     <div>
@@ -11,5 +10,5 @@ export const MainPage: React.FC = () => {
       <Contribution />
       <ContactUs />
     </div>
-  );
-};
+  )
+}
