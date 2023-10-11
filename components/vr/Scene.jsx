@@ -329,6 +329,8 @@ export function Scene({
               scale={hover4 ? 0.03 : 0.02}
               onClick={(event) => {
                 setTarget([0, 0.35, 0])
+                setHover2(false)
+                setHover1(false)
                 animateCameraDefault()
                 setRotation(false)
                 setZoom(false)
@@ -436,6 +438,7 @@ export function Scene({
               scale={hover6 ? 0.03 : 0.02}
               onClick={(event) => {
                 setTarget([0, 0.35, 0])
+                setHover3(false)
                 animateCameraDefault()
                 setRotation(false)
                 setZoom(false)

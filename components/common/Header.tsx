@@ -21,19 +21,43 @@ export const Header: React.FC = () => {
   const renderButton = () => {
     if (!router.pathname.includes('contact')) {
       return (
-        <button
-          type='button'
-          className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
-          name='button'
-          onClick={() => {
-            document
-              .querySelector('#about')
-              ?.scrollIntoView({ behavior: 'smooth' })
-            setMenuToggled(false)
-          }}
-        >
-          Show More
-        </button>
+        <div className='flex flex-col gap-2'>
+          <button
+            type='button'
+            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            name='button'
+            onClick={() => {
+              document
+                .querySelector('#about')
+                ?.scrollIntoView({ behavior: 'smooth' })
+              setMenuToggled(false)
+            }}
+          >
+            Show More
+          </button>
+
+          <button
+            type='button'
+            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            name='button'
+            onClick={() => {
+              window.open('http://localhost:3000/3d')
+            }}
+          >
+            3D on pc
+          </button>
+
+          <button
+            type='button'
+            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            name='button'
+            onClick={() => {
+              window.open('http://localhost:3000/3dm')
+            }}
+          >
+            3D on mobile
+          </button>
+        </div>
       )
     }
     return null

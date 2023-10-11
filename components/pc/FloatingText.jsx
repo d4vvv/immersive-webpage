@@ -17,27 +17,6 @@ export function FloatingText({ exclamation }) {
           />
         </mesh>
 
-        <mesh
-          rotation={[0, -0.1, 0]}
-          position={[1.9, 1.56, -0.51]}
-          onClick={(event) => {
-            window.open('https://ieeexplore.ieee.org/document/10108708')
-          }}
-          onPointerOver={(event) => {
-            setHover(true)
-          }}
-          onPointerOut={(event) => {
-            setHover(false)
-          }}
-        >
-          <planeGeometry attach='geometry' args={[1.35, 0.2]} />
-          <meshBasicMaterial
-            attach='material'
-            color='white'
-            transparent
-            opacity={0}
-          />
-        </mesh>
         <Text
           fontSize={0.055} // Adjust font size as per your requirement
           position={[1.9, 2, -0.4]} // Set the position of the text in 3D space
@@ -55,22 +34,7 @@ and immersive way. For instance, we can recreate
 the indoors of a mobile MRI unit within
 the VR environment. This can help introduce
 potential patients and medical personnel
-to the advantages and disadvantages of mobile MRI,
-as they can virtually and interactively experience 
-the equipment and its environment.`}
-        </Text>
-
-        <Text
-          fontSize={hover ? 0.058 : 0.055}
-          position={[1.85, 1.6, -0.4]}
-          color={'purple'}
-          anchorX='center'
-          anchorY='middle'
-          rotation={[0, -0.1, 0]}
-        >
-          {`
-More can be found here:
-https://ieeexplore.ieee.org/document/10108708`}
+to the advantages and disadvantages of mobile MRI.`}
         </Text>
       </>
     )
@@ -103,10 +67,7 @@ https://ieeexplore.ieee.org/document/10108708`}
               ways, including visualization and analysis
               of medical images. This can help radiologists
               visualize and analyze complex anatomical 
-              structures. We can also use VR to facilitate 
-              collaboration between radiologists and other 
-              healthcare professionals, such as surgeons
-              and oncologists.`}
+              structures.`}
         </Text>
       </>
     )
