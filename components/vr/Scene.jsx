@@ -254,7 +254,7 @@ export function Scene({
         >
           <primitive
             object={arrowDoctor.scene}
-            scale={hover0 ? 0.03 : 0.02}
+            scale={hover0 ? 0.05 : 0.04}
             onClick={(event) => {
               setTarget([1, 1.5, -0.6])
               animateCameraStart()
@@ -279,7 +279,7 @@ export function Scene({
         >
           <primitive
             object={arrowRadiologist.scene}
-            scale={hover5 ? 0.02 : 0.015}
+            scale={hover5 ? 0.03 : 0.02}
             onClick={(event) => {
               setTarget([-2.2, 1.15, -0.71])
               animateCameraOverTable()
@@ -326,7 +326,7 @@ export function Scene({
           >
             <primitive
               object={arrowDoor.scene}
-              scale={hover4 ? 0.03 : 0.02}
+              scale={hover4 ? 0.05 : 0.04}
               onClick={(event) => {
                 setTarget([0, 0.35, 0])
                 setHover2(false)
@@ -337,6 +337,7 @@ export function Scene({
                 setFull(false)
                 setShow(0)
                 setHover4(false)
+                setExclamation(5)
               }}
               onPointerOver={(event) => {
                 setHover2(false)
@@ -353,7 +354,7 @@ export function Scene({
         </Float>
 
         <Float
-          position={[1, 1.2, -0.5]}
+          position={[1, 1.25, -0.5]}
           speed={0.5}
           rotationIntensity={0.2}
           floatIntensity={0.2}
@@ -367,8 +368,14 @@ export function Scene({
             }}
           >
             <primitive
-              object={exclamationMarkGlass.scene}
-              scale={hover1 ? 0.1 : 0.08}
+              object={exclamationMarkDoctor.scene}
+              scale={hover1 ? 0.15 : 0.1}
+              onClick={(event) => {
+                setHover2(false)
+                setHover1(true)
+                setExclamation(1)
+                setGlass(1)
+              }}
               onPointerOver={(event) => {
                 setHover2(false)
                 setHover1(true)
@@ -380,7 +387,7 @@ export function Scene({
         </Float>
 
         <Float
-          position={[-1, 1.7, -1]}
+          position={[-1, 1.5, -1]}
           speed={0.5}
           rotationIntensity={0.2}
           floatIntensity={0.2}
@@ -394,8 +401,14 @@ export function Scene({
             }}
           >
             <primitive
-              object={exclamationMarkDoctor.scene}
-              scale={hover2 ? 0.1 : 0.08}
+              object={exclamationMarkGlass.scene}
+              scale={hover2 ? 0.2 : 0.15}
+              onClick={(event) => {
+                setHover1(false)
+                setHover2(true)
+                setExclamation(2)
+                setGlass(2)
+              }}
               onPointerOver={(event) => {
                 setHover1(false)
                 setHover2(true)
@@ -435,7 +448,7 @@ export function Scene({
           >
             <primitive
               object={arrowDoor.scene}
-              scale={hover6 ? 0.03 : 0.02}
+              scale={hover6 ? 0.06 : 0.04}
               onClick={(event) => {
                 setTarget([0, 0.35, 0])
                 setHover3(false)
@@ -446,6 +459,7 @@ export function Scene({
                 setShow(0)
                 setHover6(false)
                 setGlass(2)
+                setExclamation(5)
               }}
               onPointerOver={(event) => {
                 setHover3(false)
@@ -475,7 +489,12 @@ export function Scene({
           >
             <primitive
               object={exclamationMarkDevices.scene}
-              scale={hover3 ? 0.1 : 0.08}
+              scale={hover3 ? 0.2 : 0.15}
+              onClick={(event) => {
+                setHover3(true)
+                setExclamation(3)
+                setGlass(2)
+              }}
               onPointerOver={(event) => {
                 setHover3(true)
                 setExclamation(3)

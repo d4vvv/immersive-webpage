@@ -5,6 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Float } from '@react-three/drei'
 import { Doctor } from './Doctor'
 import { Patient } from './Patient'
+import { Technician } from './Technician'
 
 export function Scene({
   show,
@@ -146,6 +147,7 @@ export function Scene({
     } else {
       setGlass(1)
       setFull(true)
+      setShow(2)
       animateCameraRadiologist()
       setTarget([-2, 1.8, -0.71])
     }
@@ -166,7 +168,6 @@ export function Scene({
     if (t < 1) {
       requestAnimationFrame(animateCameraRadiologist)
     } else {
-      setShow(2)
       setTarget([-3.4, 1.9, -0.71])
     }
   }
@@ -226,7 +227,7 @@ export function Scene({
     return (
       <>
         <Doctor
-          scale={[100, 100, 100]}
+          scale={[115, 115, 115]}
           position={[1, 0.2, 0.6]}
           rotation={[0, 3, 0]}
         />
@@ -235,8 +236,14 @@ export function Scene({
           position={[1.7, 0.18, -0.6]}
           rotation={[0, -1.6, 0]}
         />
+        <Technician
+          scale={[0.022, 0.022, 0.022]}
+          position={[-3.12, 0.2, -0.8]}
+          rotation={[0, 1.6, 0]}
+        />
+
         <Float
-          position={[1.15, 2.7, 0.7]}
+          position={[1.15, 3, 0.7]}
           rotation={[0, 1.8, 1.8]}
           rotationIntensity={0.2}
           floatIntensity={0.3}
@@ -261,7 +268,7 @@ export function Scene({
         </Float>
 
         <Float
-          position={[-2.7, 3, -1.4]}
+          position={[-3, 3, -1.4]}
           rotation={[0, 1.8, 1.8]}
           rotationIntensity={0.2}
           floatIntensity={0.3}
@@ -289,6 +296,11 @@ export function Scene({
   } else if (show === 1) {
     return (
       <>
+        <Technician
+          scale={[0.022, 0.022, 0.022]}
+          position={[-3.12, 0.2, -0.8]}
+          rotation={[0, 1.6, 0]}
+        />
         <Patient
           scale={[1, 1, 1]}
           position={[1.7, 0.18, -0.6]}
@@ -335,7 +347,7 @@ export function Scene({
           floatIntensity={0.2}
         >
           <primitive
-            object={exclamationMarkGlass.scene}
+            object={exclamationMarkDoctor.scene}
             scale={hover1 ? 0.1 : 0.08}
             onPointerOver={(event) => {
               setHover2(false)
@@ -353,7 +365,7 @@ export function Scene({
           floatIntensity={0.2}
         >
           <primitive
-            object={exclamationMarkDoctor.scene}
+            object={exclamationMarkGlass.scene}
             scale={hover2 ? 0.1 : 0.08}
             onPointerOver={(event) => {
               setHover1(false)

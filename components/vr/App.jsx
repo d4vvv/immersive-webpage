@@ -40,6 +40,7 @@ function App() {
               setVrMode(1)
               setFull(true)
               setShow(1)
+              setExclamation(5)
             }}
             onSessionEnd={(event) => {
               setZoom(false)
@@ -49,6 +50,7 @@ function App() {
               setHover1(false)
               setHover2(false)
               setHover3(false)
+              setExclamation(5)
               setVrMode(0)
               setGlass(2)
               setRestore(1)
