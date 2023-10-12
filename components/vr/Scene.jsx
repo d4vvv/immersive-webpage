@@ -1,11 +1,9 @@
 import * as THREE from 'three'
 import React, { useEffect, useState } from 'react'
 import { useLoader, useThree } from '@react-three/fiber'
-import { GLTFLoader, useGLTF } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Float } from '@react-three/drei'
 import { Interactive } from '@react-three/xr'
-useGLTF.preload('models/cloudMri.glb')
-useGLTF.preload('models/cloudRadiologist.glb')
 export function Scene({
   hover1,
   hover2,
