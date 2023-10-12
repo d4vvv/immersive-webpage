@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
   const renderButton = () => {
     if (!router.pathname.includes('contact')) {
       return (
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-3'>
           <button
             type='button'
             className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'

@@ -1,12 +1,13 @@
 import * as THREE from 'three'
 import React, { useEffect, useState } from 'react'
 import { useLoader, useThree } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTFLoader, useGLTF } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Float } from '@react-three/drei'
 import { Doctor } from './Doctor'
 import { Patient } from './Patient'
 import { Technician } from './Technician'
-
+useGLTF.preload('models/cloudMri.glb')
+useGLTF.preload('models/cloudRadiologist.glb')
 export function Scene({
   show,
   setShow,
