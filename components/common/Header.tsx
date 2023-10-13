@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
             className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
             name='button'
             onClick={() => {
-              window.open('http://localhost:3000/3d')
+              window.open('https://www.immersivegroup.eu/3d')
             }}
           >
             3D on pc
@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
             className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
             name='button'
             onClick={() => {
-              window.open('http://localhost:3000/3dm')
+              window.open('https://www.immersivegroup.eu/3dm')
             }}
           >
             3D on mobile

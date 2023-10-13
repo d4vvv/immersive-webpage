@@ -20,7 +20,7 @@ export function SpeechBubbleHint({ hint }) {
         <Text
           fontSize={0.1} // Adjust font size as per your requirement
           position={[2.8, 1.85, 1.8]} // Set the position of the text in 3D space
-          color='red' // Set the text color
+          color='navy' // Set the text color
           anchorX='center' // Center the text horizontally
           anchorY='middle' // Center the text vertically
           letterSpacing={0.05}

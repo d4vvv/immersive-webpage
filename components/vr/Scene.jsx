@@ -7,6 +7,7 @@ import { Interactive } from '@react-three/xr'
 import { SpeechBubbleHint } from './SpeechBubbleHint'
 export function Scene({
   hint,
+  setHint,
   hover1,
   hover2,
   hover3,

@@ -17,8 +17,8 @@ function App() {
   ])
   const [fov, setFov] = useState(90)
   const [target, setTarget] = useState([0, 0.35, 0])
-  const [rotation, setRotation] = useState(true)
-  const [zoom, setZoom] = useState(true)
+  const [rotation, setRotation] = useState(false)
+  const [zoom, setZoom] = useState(false)
   const [exclamation, setExclamation] = useState(4)
   const [glass, setGlass] = useState(0)
   const [full, setFull] = useState(false)
@@ -88,6 +88,7 @@ function App() {
 
             <Scene
               hint={hint}
+              setHint={setHint}
               hover1={hover1}
               hover2={hover2}
               hover3={hover3}

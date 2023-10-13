@@ -10,7 +10,7 @@ export function FloatingText({ exclamation, setExclamation }) {
         <Text
           fontSize={0.06} // Adjust font size as per your requirement
           position={[1.8, 1.9, -0.4]} // Set the position of the text in 3D space
-          color='blue' // Set the text color
+          color='navy' // Set the text color
           anchorX='center' // Center the text horizontally
           anchorY='middle' // Center the text vertically
           letterSpacing={0.05}
@@ -36,7 +36,7 @@ to the advantages and disadvantages of mobile MRI.`}
         <Text
           fontSize={0.06}
           position={[1.7, 1.89, -0.4]}
-          color='blue'
+          color='navy'
           anchorX='center'
           anchorY='middle'
           letterSpacing={0.05}
@@ -60,7 +60,7 @@ analyze complex anatomical structures.`}
         <Text
           fontSize={0.08}
           position={[-2.6, 2.2, 0.5]}
-          color='blue'
+          color='navy'
           anchorX='center'
           anchorY='middle'
           letterSpacing={0.05}
@@ -86,7 +86,7 @@ treatment options.`}
         <Text
           fontSize={1}
           position={[1.6, 1.6, -0.5]}
-          color='blue'
+          color='navy'
           anchorX='center'
           anchorY='middle'
           rotation={[0, 0, 0]}
