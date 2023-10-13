@@ -221,7 +221,13 @@ export function Scene({
   const [hover4, setHover4] = useState(false)
   const [hover5, setHover5] = useState(false)
   const [hover6, setHover6] = useState(false)
+  const [preload, setPreload] = useState(0)
 
+  if (preload === 0) {
+    setShow(2)
+    setPreload(1)
+    setShow(0)
+  }
   if (show === 0) {
     return (
       <>

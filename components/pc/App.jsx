@@ -62,7 +62,10 @@ function App() {
             setDefaultCameraPosition={setDefaultCameraPosition}
             setFull={setFull}
           />
-          <FloatingText exclamation={exclamation} />
+          <FloatingText
+            exclamation={exclamation}
+            setExclamation={setExclamation}
+          />
         </Suspense>
       </Canvas>
     </main>

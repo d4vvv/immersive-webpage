@@ -2,7 +2,7 @@ import React from 'react'
 import { Text } from '@react-three/drei'
 import { SpeechBubbleMri } from './SpeechBubbleMri'
 import { SpeechBubbleRadiologist } from './SpeechBubbleRadiologist'
-export function FloatingText({ exclamation }) {
+export function FloatingText({ exclamation, setExclamation }) {
   if (exclamation === 1) {
     return (
       <>
@@ -78,15 +78,20 @@ treatment options.`}
       </>
     )
   } else if (exclamation === 4) {
+    setExclamation(5)
     return (
-      <Text
-        fontSize={1}
-        position={[1.6, 1.6, -0.5]}
-        color='blue'
-        anchorX='center'
-        anchorY='middle'
-        rotation={[0, 0, 0]}
-      ></Text>
+      <>
+        <SpeechBubbleMri />
+        <SpeechBubbleRadiologist />
+        <Text
+          fontSize={1}
+          position={[1.6, 1.6, -0.5]}
+          color='blue'
+          anchorX='center'
+          anchorY='middle'
+          rotation={[0, 0, 0]}
+        ></Text>
+      </>
     )
   } else {
     return null

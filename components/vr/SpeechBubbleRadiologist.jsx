@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import { useGLTF } from '@react-three/drei'
 export function SpeechBubbleRadiologist() {
   const cloudRadiologist = useLoader(GLTFLoader, 'models/cloudRadiologist.glb')
 
@@ -15,4 +14,3 @@ export function SpeechBubbleRadiologist() {
 
   return <primitive object={cloudRadiologist.scene} />
 }
-useGLTF.preload('models/cloudRadiologist.glb')

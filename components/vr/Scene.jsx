@@ -222,7 +222,6 @@ export function Scene({
   }, [exclamationMarkDevices])
 
   const [hover0, setHover0] = useState(false)
-
   const [hover4, setHover4] = useState(false)
   const [hover5, setHover5] = useState(false)
   const [hover6, setHover6] = useState(false)
