@@ -17,8 +17,8 @@ function App() {
   ])
   const [fov, setFov] = useState(90)
   const [target, setTarget] = useState([0, 0.35, 0])
-  const [rotation, setRotation] = useState(false)
-  const [zoom, setZoom] = useState(false)
+  const [rotation, setRotation] = useState(true)
+  const [zoom, setZoom] = useState(true)
   const [exclamation, setExclamation] = useState(4)
   const [glass, setGlass] = useState(0)
   const [full, setFull] = useState(false)
@@ -26,6 +26,9 @@ function App() {
   const [restore, setRestore] = useState(0)
   const [show, setShow] = useState(0)
   const [reset, setReset] = useState(0)
+  const [hint, setHint] = useState(0)
+  const [keys, setKeys] = useState(false)
+  const [pan, setPan] = useState(false)
   const [hover1, setHover1] = useState(false)
   const [hover2, setHover2] = useState(false)
   const [hover3, setHover3] = useState(false)
@@ -41,10 +44,13 @@ function App() {
               setFull(true)
               setShow(1)
               setExclamation(5)
+              setHint(1)
             }}
             onSessionEnd={(event) => {
               setZoom(false)
               setRotation(false)
+              setPan(false)
+              setKeys(false)
               setFull(false)
               setShow(0)
               setHover1(false)
@@ -53,6 +59,7 @@ function App() {
               setExclamation(5)
               setVrMode(0)
               setGlass(2)
+              setHint(0)
               setRestore(1)
             }}
           >
@@ -61,6 +68,8 @@ function App() {
               target={target}
               enableRotate={rotation}
               enableZoom={zoom}
+              enableKeys={keys}
+              enablePan={pan}
             />
             <PerspectiveCamera
               makeDefault
@@ -78,6 +87,7 @@ function App() {
             <Glass glass={glass} setGlass={setGlass} />
 
             <Scene
+              hint={hint}
               hover1={hover1}
               hover2={hover2}
               hover3={hover3}

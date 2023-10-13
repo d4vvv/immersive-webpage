@@ -16,11 +16,13 @@ function App() {
   ])
   const [fov, setFov] = useState(90)
   const [target, setTarget] = useState([0, 0.35, 0])
-  const [rotation, setRotation] = useState(true)
-  const [zoom, setZoom] = useState(true)
+  const [rotation, setRotation] = useState(false)
+  const [zoom, setZoom] = useState(false)
   const [exclamation, setExclamation] = useState(4)
   const [glass, setGlass] = useState(0)
   const [full, setFull] = useState(false)
+  const [keys, setKeys] = useState(false)
+  const [pan, setPan] = useState(false)
   const [restore, setRestore] = useState(0)
   const [show, setShow] = useState(0)
   return (
@@ -32,6 +34,8 @@ function App() {
             target={target}
             enableRotate={rotation}
             enableZoom={zoom}
+            enableKeys={keys}
+            enablePan={pan}
           />
           <PerspectiveCamera
             makeDefault
