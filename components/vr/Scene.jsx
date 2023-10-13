@@ -271,7 +271,7 @@ export function Scene({
         </Float>
 
         <Float
-          position={[-2.7, 3, -1.4]}
+          position={[-2.7, 3.3, -1.4]}
           rotation={[0, 1.8, 1.8]}
           rotationIntensity={0.2}
           floatIntensity={0.3}
