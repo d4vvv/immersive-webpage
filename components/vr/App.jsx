@@ -26,7 +26,6 @@ function App() {
   const [restore, setRestore] = useState(0)
   const [show, setShow] = useState(0)
   const [reset, setReset] = useState(0)
-  const [hint, setHint] = useState(0)
   const [keys, setKeys] = useState(false)
   const [pan, setPan] = useState(false)
   const [hover1, setHover1] = useState(false)
@@ -42,9 +41,8 @@ function App() {
               setGlass(1)
               setVrMode(1)
               setFull(true)
+              setExclamation(0)
               setShow(1)
-              setExclamation(5)
-              setHint(1)
             }}
             onSessionEnd={(event) => {
               setZoom(false)
@@ -59,7 +57,6 @@ function App() {
               setExclamation(5)
               setVrMode(0)
               setGlass(2)
-              setHint(0)
               setRestore(1)
             }}
           >
@@ -87,8 +84,6 @@ function App() {
             <Glass glass={glass} setGlass={setGlass} />
 
             <Scene
-              hint={hint}
-              setHint={setHint}
               hover1={hover1}
               hover2={hover2}
               hover3={hover3}

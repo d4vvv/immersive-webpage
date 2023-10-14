@@ -4,10 +4,7 @@ import { useLoader, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Float } from '@react-three/drei'
 import { Interactive } from '@react-three/xr'
-import { SpeechBubbleHint } from './SpeechBubbleHint'
 export function Scene({
-  hint,
-  setHint,
   hover1,
   hover2,
   hover3,
@@ -300,7 +297,6 @@ export function Scene({
   } else if (show === 1) {
     return (
       <>
-        <SpeechBubbleHint hint={hint} />
         <Float
           position={[-0.3, 1.4, -4]}
           rotation={[1.5, 0, 3.2]}
@@ -316,7 +312,6 @@ export function Scene({
               setExclamation(5)
               setGlass(1)
               setHover4(true)
-              setHint(0)
             }}
             onBlur={(event) => {
               setHover4(false)
@@ -325,7 +320,6 @@ export function Scene({
               setHover4(false)
               setShow(2)
               setVrMode(2)
-              setHint(0)
             }}
           >
             <primitive

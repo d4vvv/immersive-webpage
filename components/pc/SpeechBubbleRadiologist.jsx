@@ -5,11 +5,11 @@ export function SpeechBubbleRadiologist() {
   const cloudRadiologist = useLoader(GLTFLoader, 'models/cloudRadiologist.glb')
 
   useEffect(() => {
-    cloudRadiologist.scene.scale.set(2, 2, 2)
-    cloudRadiologist.scene.position.set(-2.9, 1.45, 1.5)
-    cloudRadiologist.scene.rotation.y = 0
-    cloudRadiologist.scene.rotation.x = 1.6
-    cloudRadiologist.scene.rotation.z = -1.2
+    cloudRadiologist.scene.scale.set(15, 15, 15)
+    cloudRadiologist.scene.position.set(-2.7, 1.7, 0.9)
+    cloudRadiologist.scene.rotation.y = -2
+    cloudRadiologist.scene.rotation.x = 0
+    cloudRadiologist.scene.rotation.z = 0
   }, [cloudRadiologist])
 
   return <primitive object={cloudRadiologist.scene} />
