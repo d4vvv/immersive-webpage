@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
         <div className='flex flex-col gap-3'>
           <button
             type='button'
-            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
             name='button'
             onClick={() => {
               document
@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
 
           <button
             type='button'
-            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
             name='button'
             onClick={() => {
               window.open('https://www.immersivegroup.eu/3d')
@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
 
           <button
             type='button'
-            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-1/2 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
             name='button'
             onClick={() => {
               window.open('https://www.immersivegroup.eu/3dm')
