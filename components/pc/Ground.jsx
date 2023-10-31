@@ -4,6 +4,9 @@ import { useLoader } from '@react-three/fiber'
 import { LinearEncoding, RepeatWrapping, TextureLoader } from 'three'
 
 export function Ground() {
+  /**
+   * creation of terrain model along with texture mapping
+   */
   const normal = useLoader(TextureLoader, 'textures/terrain-normal.jpg')
 
   useEffect(() => {

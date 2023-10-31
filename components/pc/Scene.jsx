@@ -18,7 +18,11 @@ export function Scene({
   setZoom,
   setFull,
 }) {
-  //Camera movement
+  /**
+   * let variables are responsible for the initial time for camera movement
+   * duration is responsible for the duration of the camera movement(in 60fps time duration)
+   *
+   */
   const { camera } = useThree()
   const duration = 1
   let elapsed = 0
@@ -29,19 +33,47 @@ export function Scene({
   let elapsedTimeRadiologist = 0
   let elapsedTimeRadiologistRoom = 0
 
+  /**
+   * Animate the camera to a target position for the table view.
+   */
   const animateCameraTable = () => {
-    const startPosition = new THREE.Vector3(1, 4.5, -4) // Initial camera position
-    const endPosition = new THREE.Vector3(1, 1.8, -0.51) // Final camera position
-    elapsedTimeTable += 1 / 60 // Increment time by the frame rate (60 FPS)
-    const t = Math.min(elapsedTimeTable / duration, 1) // Clamp the value between 0 and 1
+    /**
+     * Initial camera position for the table view.
+     * @type {THREE.Vector3}
+     */
+    const startPosition = new THREE.Vector3(1, 4.5, -4)
+    /**
+     * Final camera position for the table view.
+     * @type {THREE.Vector3}
+     */
+    const endPosition = new THREE.Vector3(1, 1.8, -0.51)
+    /**
+     * Incremental time for the animation.
+     * @type {number}
+     */
+    elapsedTimeTable += 1 / 60
+    /**
+     * Calculate the progress of the animation.
+     * @type {number}
+     */
+    const t = Math.min(elapsedTimeTable / duration, 1)
+    /**
+     * Interpolate between start and end positions.
+     * @type {THREE.Vector3}
+     */
     const newPosition = new THREE.Vector3().lerpVectors(
       startPosition,
       endPosition,
       t
     )
+    /**
+     * Update the camera position.
+     */
     camera.position.copy(newPosition)
 
-    // Call the animation on the next frame
+    /**
+     * Call the animation on the next frame
+     */
     if (t < 1) {
       requestAnimationFrame(animateCameraTable)
     } else {
@@ -175,6 +207,9 @@ export function Scene({
     animateCameraDefault()
   }
 
+  /**
+   * loading and rotating arrows models into the scene
+   */
   const arrowDoctor = useLoader(GLTFLoader, '/models/arrowDoctor.glb')
   const arrowDoor = useLoader(GLTFLoader, '/models/arrowDoor.glb')
   const arrowRadiologist = useLoader(GLTFLoader, '/models/arrowRadiologist.glb')
@@ -192,6 +227,9 @@ export function Scene({
     arrowRadiologist.scene.rotation.y = 1.5
   }, [arrowRadiologist])
 
+  /**
+   * loading and rotating exclamation marks into the scene
+   */
   const exclamationMarkDoctor = useLoader(
     GLTFLoader,
     '/models/exclamationMarkDoctor.glb'
@@ -214,6 +252,9 @@ export function Scene({
     exclamationMarkDevices.scene.rotation.y = 1.5
   }, [exclamationMarkDevices])
 
+  /**
+   * State hooks responsible for hovering over the arrows and exclamation marks
+   */
   const [hover0, setHover0] = useState(false)
   const [hover1, setHover1] = useState(false)
   const [hover2, setHover2] = useState(false)
@@ -221,6 +262,9 @@ export function Scene({
   const [hover4, setHover4] = useState(false)
   const [hover5, setHover5] = useState(false)
   const [hover6, setHover6] = useState(false)
+  /**
+   * preload bypasses the loading of elements while the scene is already active to avoid screen flashing
+   */
   const [preload, setPreload] = useState(0)
 
   if (preload === 0) {
@@ -228,6 +272,10 @@ export function Scene({
     setPreload(1)
     setShow(0)
   }
+
+  /**
+   * Placing the characters and models in the scene
+   */
   if (show === 0) {
     return (
       <>

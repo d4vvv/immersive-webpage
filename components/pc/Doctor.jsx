@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+/**
+ *import of doctor via gltfjsx
+ */
 
 export function Doctor(props) {
   const group = useRef()

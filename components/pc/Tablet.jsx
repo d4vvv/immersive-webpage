@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 export function Tablet() {
+  /**
+   * Loading, scaling, positioning and rotating the tablet model
+   */
   const tablet = useLoader(GLTFLoader, 'models/tablet.glb')
 
   useEffect(() => {

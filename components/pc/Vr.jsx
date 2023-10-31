@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 export function Vr() {
+  /**
+   * Loading, scaling, positioning and rotating the VR model
+   */
   const vr = useLoader(GLTFLoader, 'models/vr.glb')
 
   useEffect(() => {

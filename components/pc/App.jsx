@@ -11,6 +11,11 @@ import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { LoadingScreen } from './LoadingScreen'
 import { Ground } from './Ground'
 function App() {
+  /**
+   * Main file containing the initialization of entire scene.
+   * Hooks below are used to initialize and track the values of components
+   * In case a re-render is needed
+   */
   const [defaultCameraPosition, setDefaultCameraPosition] = useState([
     -2.25, 4.5, -4.2,
   ])
@@ -26,6 +31,30 @@ function App() {
   const [restore, setRestore] = useState(0)
   const [show, setShow] = useState(0)
   return (
+    /**
+     * <main> - responsible for making the Canvas element full-screen
+     * <Canvas> - responsible for setting up the camera
+     * <Suspense> - responsible for display of loading screen untill the website is loaded
+     * <OrbitControls> - responsible for controll of the movement of camera
+     * <PerspectiveCamera> - responsible for setting up the camera for the scene
+     * <color> - tag used to create beige background
+     * <Environment> - responsible for setting up the lights for the scene according to the hdr texture
+     * <ambientLight> - provides omnidirectional light
+     * <Rooms> - responsible for display of MRI building textures, passed hook determines the roofless or full building
+     * <Tablet> - responsible for display of tablet on the radiologist table
+     * <Vr> - responsible for the display of VR on the radiologist table
+     * <Glass> - responsible for display of black window, passed hooks determine whether it should be displayed or not
+     * <Ground> - responsible for reflective ground
+     * <Scene> - respponsible for animations of camera and environment, along with display of interactive elements.
+     * passed hooks provide for the functionality of changing the look of the scene, the hooks are as follows:
+     * show = responsible for current set of animated people and objects on the scene
+     * restore = resets the camera to default position
+     * defaultCameraPosition = specifies the camera position to move back to
+     * setExclamation = responsible for display of exclamation marks
+     * setGlass = responsible for display of black glass element
+     * setFull = responsible for type of display of MRI room
+     * <FloatingText> - responsible for the text visible in the scene
+     */
     <main className={'scroll-smooth h-screen'}>
       <Canvas shadows>
         <Suspense fallback={<LoadingScreen />}>

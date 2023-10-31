@@ -305,7 +305,9 @@ export function Scene({
           speed={0.4}
         >
           <Interactive
-            /* Called when hovered by a controller */
+            /**
+             * Called when hovered by a controller
+             */
             onHover={(event) => {
               setHover2(false)
               setHover1(false)

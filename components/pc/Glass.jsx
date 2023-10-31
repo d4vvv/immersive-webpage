@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 export function Glass({ glass, setGlass }) {
+  /**
+   * import of the Glass model
+   */
   const window = useLoader(GLTFLoader, 'models/glass.glb')
 
   useEffect(() => {

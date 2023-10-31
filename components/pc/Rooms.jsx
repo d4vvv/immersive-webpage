@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 export function Rooms({ full }) {
+  /**
+   * loading of MRI room dependent from the 'full' hook
+   */
   const rooflessMriRoom = useLoader(GLTFLoader, 'models/roofless_mri.glb')
   const fullMriRoom = useLoader(GLTFLoader, 'models/full_mri.glb')
 

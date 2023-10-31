@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function Patient(props) {
+  /**
+   * import of Patient on the MRI table via gltfjsx
+   */
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('models/patient.glb')
   const { actions } = useAnimations(animations, group)

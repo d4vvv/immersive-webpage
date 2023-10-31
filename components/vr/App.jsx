@@ -32,6 +32,14 @@ function App() {
   const [hover2, setHover2] = useState(false)
   const [hover3, setHover3] = useState(false)
   return (
+    /**
+     * Differences with respect to pc version:
+     * <VRButton> - adds 'enter vr' button to the scene
+     * <XR> - responsible for starting the xr session
+     * <Controllers>, <Hands> - responsible for making the interactions in VR possible
+     * hooks in the <Scene>:
+     * -vrMode, responsible for player teleportation during xr session
+     */
     <main className={'scroll-smooth h-screen'}>
       <VRButton />
       <Canvas shadows>
@@ -110,7 +118,7 @@ function App() {
               exclamation={exclamation}
               setExclamation={setExclamation}
             />
-            <Player vrMode={vrMode} setVrMode={setVrMode} />
+            <Player vrMode={vrMode} />
             <Controllers />
             <Hands />
           </XR>

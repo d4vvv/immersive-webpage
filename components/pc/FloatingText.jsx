@@ -3,6 +3,11 @@ import { Text } from '@react-three/drei'
 import { SpeechBubbleMri } from './SpeechBubbleMri'
 import { SpeechBubbleRadiologist } from './SpeechBubbleRadiologist'
 export function FloatingText({ exclamation, setExclamation }) {
+  /**
+   * <SpeechBubbleMri> - responsible for import of speech bubble model over the MRI table
+   * <Text> - text placed in front of the MRI speech bubble
+   *
+   */
   if (exclamation === 1) {
     return (
       <>
