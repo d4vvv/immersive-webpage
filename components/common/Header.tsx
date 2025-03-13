@@ -36,27 +36,25 @@ export const Header: React.FC = () => {
             Show More
           </button>
 
-          <button
-            type='button'
-            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
-            name='button'
-            onClick={() => {
-              window.open('https://www.immersivegroup.eu/3d')
-            }}
-          >
-            3D on pc
-          </button>
+          <Link href={'/3d'} className='hidden md:block'>
+            <button
+              type='button'
+              name='3d-desktop-button'
+              className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+            >
+              3D
+            </button>
+          </Link>
 
-          <button
-            type='button'
-            className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
-            name='button'
-            onClick={() => {
-              window.open('https://www.immersivegroup.eu/3dm')
-            }}
-          >
-            3D on mobile
-          </button>
+          <Link href={'/3dm'} className='md:hidden'>
+            <button
+              type='button'
+              className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
+              name='button'
+            >
+              3D
+            </button>
+          </Link>
         </div>
       )
     }
