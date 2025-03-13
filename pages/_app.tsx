@@ -14,9 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextSeo
-        titleTemplate='Immersive | %s'
-        defaultTitle='Immersive | HUMAN-CENTERED AR/MR/VR'
-        description='Immersive - HUMAN-CENTERED AR/MR/VR'
+        titleTemplate='Medforce | %s'
+        defaultTitle='Medforce | HUMAN-CENTERED AR/MR/VR'
+        description='Medforce - HUMAN-CENTERED AR/MR/VR'
       />
       <Head>
         <link rel='shourtcut icon' href='img/favicon.png' />

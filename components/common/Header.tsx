@@ -10,13 +10,13 @@ import styles from './Header.module.css'
 
 export const Header: React.FC = () => {
   const [isMenuToggled, setMenuToggled] = useState(false)
-  const [isRainbowActive, setRainbowActive] = useState(false)
+  // const [isRainbowActive, setRainbowActive] = useState(false)
   const router = useRouter()
 
-  const onClickPride = () => {
-    setRainbowActive(true)
-    setTimeout(() => setRainbowActive(false), 10000)
-  }
+  // const onClickPride = () => {
+  //   setRainbowActive(true)
+  //   setTimeout(() => setRainbowActive(false), 10000)
+  // }
 
   const renderButton = () => {
     if (!router.pathname.includes('contact')) {
@@ -91,9 +91,13 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={cs('min-h-screen w-full relative mb-[10%]', styles.gradient, {
-        [styles.gradientActive]: isRainbowActive,
-      })}
+      className={cs(
+        'min-h-screen w-full relative mb-[10%]',
+        styles.gradient
+        //   {
+        //   [styles.gradientActive]: isRainbowActive,
+        // }
+      )}
     >
       <nav className='!bg-transparent w-full ml-auto flex font-Lexend pl-4 pr-6 py-2 text-white'>
         <Link
@@ -101,7 +105,7 @@ export const Header: React.FC = () => {
           href='/'
         >
           <Image className='w-[15%] p-[2%]' src={logo} alt='LOGO' priority />
-          Immersive
+          MEDFORCE
         </Link>
         <button
           className='items-left ml-auto lg:hidden'
@@ -134,7 +138,7 @@ export const Header: React.FC = () => {
               <button onClick={() => setMenuToggled(false)}>Contact</button>
             </Link>
           </li>
-          <Flags onClickPride={onClickPride} />
+          {/* <Flags onClickPride={onClickPride} /> */}
         </ul>
       </nav>
       <nav
@@ -154,7 +158,7 @@ export const Header: React.FC = () => {
               <button onClick={() => setMenuToggled(false)}>Contact</button>
             </Link>
           </li>
-          <Flags onClickPride={onClickPride} />
+          {/* <Flags onClickPride={onClickPride} /> */}
         </ul>
       </nav>
       <div className='w-full sm:max-w-[640] px-4 md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:mx-w-[1536px] mx-auto'>
