@@ -42,17 +42,17 @@ export const Header: React.FC = () => {
               name='3d-desktop-button'
               className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
             >
-              3D
+              3D on pc
             </button>
           </Link>
 
-          <Link href={'/3dm'} className='md:hidden'>
+          <Link href={'/3dm'}>
             <button
               type='button'
               className='font-medium font-Lexend border-[#f23cfa] border-4 h-10 rounded-full text-[#f23cfa] w-4/5 hover:bg-[#f23cfa] hover:text-white transition-all duration-300'
               name='button'
             >
-              3D
+              3D on mobile
             </button>
           </Link>
         </div>
